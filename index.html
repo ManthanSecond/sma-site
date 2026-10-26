@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="brand">Manthan's Portfolio</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="resume.html">Resume</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <h1>Hi, I'm Manthan</h1>
+      <p>Computer Engineering student at Nirma University, interested in data analytics, computer vision and social media analytics.</p>
+      <p>This site is my portfolio, and it is also the test site for my Google Analytics 4 practical.</p>
+      <a class="btn" href="projects.html" onclick="gtag('event','click_view_projects',{location:'hero'})">View my projects &rarr;</a>
+    </section>
+  </main>
+  <footer>Built for Social Media Analytics, Practical 8 &middot; 23BCE140</footer>
+</body>
+</html>

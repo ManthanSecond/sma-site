@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects</title>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="brand">Manthan's Portfolio</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="resume.html">Resume</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <h1>My Projects</h1>
+    <div class="cards">
+      <article class="card">
+        <h2>Content-Based Video Retrieval</h2>
+        <p>Analyses a video with OpenCV, flags near-duplicate frames and retrieves visually similar frames using colour histograms and ORB features.</p>
+        <button class="btn" data-project="video_retrieval" data-category="AI/ML">View details</button>
+        <p class="details" hidden>Samples frames at 5 fps, computes brightness, sharpness, motion, dHash and HSV histograms, then ranks matches by cosine similarity and verifies them with ORB feature matching.</p>
+      </article>
+      <article class="card">
+        <h2>Google Analytics Study</h2>
+        <p>Tracks visitor behaviour on this site with GA4 and analyses traffic sources and conversion funnels.</p>
+        <button class="btn" data-project="ga4_study" data-category="Analytics">View details</button>
+        <p class="details" hidden>Uses custom events to build a four-step funnel from landing to contact, and measures step retention and cumulative conversion.</p>
+      </article>
+      <article class="card">
+        <h2>Social Media Analytics Labs</h2>
+        <p>A set of practicals covering data collection and analysis of social platforms.</p>
+        <button class="btn" data-project="sma_labs" data-category="Analytics">View details</button>
+        <p class="details" hidden>Weekly lab work on collecting, cleaning and analysing social media data.</p>
+      </article>
+    </div>
+    <p class="next"><a class="btn" href="resume.html">Get my resume &rarr;</a></p>
+    <script>
+      document.querySelectorAll('button[data-project]').forEach(function (b) {
+        b.addEventListener('click', function () {
+          var d = b.parentElement.querySelector('.details');
+          d.hidden = !d.hidden;
+          if (!d.hidden) {
+            gtag('event', 'view_project_details', {
+              project_name: b.dataset.project,
+              project_category: b.dataset.category
+            });
+          }
+        });
+      });
+    </script>
+  </main>
+  <footer>Built for Social Media Analytics, Practical 8 &middot; 23BCE140</footer>
+</body>
+</html>

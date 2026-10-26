@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="brand">Manthan's Portfolio</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="resume.html">Resume</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <h1>Contact</h1>
+    <form id="contact-form" class="card">
+      <label>Name <input type="text" name="name" required></label>
+      <label>Email <input type="email" name="email" required></label>
+      <label>Message <textarea name="message" rows="4" required></textarea></label>
+      <button class="btn" type="submit">Send message</button>
+      <p class="note">Demo form for a class practical: messages are not stored or sent anywhere.</p>
+    </form>
+    <p id="thanks" class="card" hidden>Thanks! Your message was submitted.</p>
+    <script>
+      document.getElementById('contact-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+        gtag('event', 'submit_contact_form', {form_name: 'contact'});
+        this.hidden = true;
+        document.getElementById('thanks').hidden = false;
+      });
+    </script>
+  </main>
+  <footer>Built for Social Media Analytics, Practical 8 &middot; 23BCE140</footer>
+</body>
+</html>

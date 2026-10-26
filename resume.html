@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume</title>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="brand">Manthan's Portfolio</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="resume.html">Resume</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <h1>Resume</h1>
+    <section class="card">
+      <p><strong>Education:</strong> B.Tech, Computer Engineering, Nirma University</p>
+      <p><strong>Skills:</strong> Python, OpenCV, pandas, matplotlib, data analysis</p>
+      <p><strong>Interests:</strong> Analytics, computer vision, social media data</p>
+      <a class="btn" href="resume.pdf" download
+         onclick="gtag('event','click_resume_download',{file_name:'resume.pdf'})">Download resume (PDF)</a>
+    </section>
+    <p class="next"><a class="btn" href="contact.html">Contact me &rarr;</a></p>
+  </main>
+  <footer>Built for Social Media Analytics, Practical 8 &middot; 23BCE140</footer>
+</body>
+</html>
